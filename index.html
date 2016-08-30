@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
+    <title>Computacao Grafica - Araraki</title>
+</head>
+
+<body>
+    <div style="float:left;">
+        <h1>Computacao Grafica</h1>
+        <h5>Prof Araraki
+			<br>Ana Luiza Bastos - RA00127907
+			<br>Caio de Azevedo - RA00133000
+			<br>Guilherme Lanza - RA00111868
+		</h5>
+
+        <p>Desenhar Pontos</p>
+        <h5><i>Adicionar numero da combinacao</i></h5>
+        <input type="color" id="cor1">
+        <input type="number" name="quantity" id="qtd" min="1" max="4">
+        <button type="button" name="button1" onclick="fazerPontinho(document.getElementById('qtd').value, document.getElementById('cor1').value)">OK</button>
+
+        <p>Desenhar Reta</p>
+        <h5><i>Adicionar coordenadas x y de inicio e fim</i></h5>
+        <input type="color" id="cor2">
+        <br>
+        <p>x1:
+            <input type="text" name="x1" id="x1" placeholder="10" size="4"> y1:
+            <input type="text" name="y1" id="y1" placeholder="10" size="4">
+            <br> x2:
+            <input type="text" name="x2" id="x2" placeholder="1000" size="4"> y2:
+            <input type="text" name="y2" id="y2" placeholder="600" size="4">
+        </p>
+
+        <button type="button" name="button2" onclick="fazerReta(document.getElementById('x1').value, document.getElementById('y1').value, document.getElementById('x2').value, document.getElementById('y2').value, document.getElementById('cor2').value)">OK</button>
+
+        <p>Desenhar Circulo</p>
+        <h5><i>Adicionar centro X, centro Y e radianos</i></h5> cor da linha:
+        <input type="color" id="cor3">
+        <br> cor de dentro:
+        <input type="color" id="cor4">
+        <br>
+        <p>centro X:
+            <input type="text" name="x1" placeholder="500" id="a" size="4"> centro Y:
+            <input type="text" name="y1" placeholder="300" id="b" size="4">
+            <br> radius:
+            <input type="text" name="y1" placeholder="200" id="r" size="4">
+            <br>
+            <button type="button" name="button3" onclick="fazerCirculo(document.getElementById('a').value, document.getElementById('b').value, document.getElementById('r').value, document.getElementById('cor3').value, document.getElementById('cor4').value)">OK</button>
+
+            <p>Desenhar Letra</p>
+            <input type="color" id="cor5">
+            <input type="text" name="letra" id="letra" size="1" maxlength="1">
+            <button type="button" name="button4" onclick="fazerLetra(document.getElementById('letra').value, document.getElementById('cor5').value)">OK</button>
+    </div>
+
+    <div class='canvas'>
+        <canvas width="1000" height="600"></canvas>
+    </div>
+    <script src="main.js"></script>
+
+</body>
+
+</html>

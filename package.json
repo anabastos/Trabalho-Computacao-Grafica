@@ -1,0 +1,15 @@
+{
+  "name": "compgrafica",
+  "version": "1.0.0",
+  "description": "CoMpuTaCaO GrAFIcA",
+  "main": "main.js",
+  "scripts": {
+    "start": "webpack-dev-server --progress --colors"
+  },
+  "author": "Anaaa",
+  "license": "ISC",
+  "dependencies": {
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.15.0"
+  }
+}
